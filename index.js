@@ -21,7 +21,7 @@ const questions = [
     ["How would you describe your project?", "input", "description"],
     ["How do you install your project?", "input", "installation"],
     ["How do you use your project?", "input", "usage"],
-    ["How is your project licensed?", "checkbox", "license", licenses],
+    ["How is your project licensed?", "list", "license", licenses],
     ["How can the comunity contribute to the project?", "input", "contribution"],
     ["How do you you test your project.", "input", "test"],
     ["What is you GitHub username?", "input", "gitHubName"],
@@ -34,7 +34,28 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-
+    questionArray = [];
+    for (let question of questions) {
+        // create an array of objects with the questions
+        let questionObject = {
+            type: question[1],
+            name: question[2],
+            message: question[0],
+        }
+        // add a choices field for checkboxes or lists
+        if (question[1] === "checkbox" || question[1] === "list") {
+            questionObject.choices = licenses;
+        }
+        questionArray.push(questionObject);
+    }
+    // ask questions
+   inquirer
+     .prompt(
+        questionArray
+    )
+    .then((data) => {
+        console.log(data);
+    }); 
 }
 
 // function call to initialize program
