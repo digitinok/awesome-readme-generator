@@ -30,14 +30,22 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+   // path.format({
+   //     root: '/',
+   //     ext: '.md',
+   //     name: 'README',
+   //   });
+      fs.writeFile(fileName, data, (err) =>
+      err ? console.log(err) : console.log('Success!')
+      );
 }
 
-// function to initialize program
-function init() {
-    questionArray = [];
+// function to generate user prompts
+const promptUser = () => {
+    const questionArray = [];
     for (let question of questions) {
         // create an array of objects with the questions
-        let questionObject = {
+        const questionObject = {
             type: question[1],
             name: question[2],
             message: question[0],
@@ -47,16 +55,25 @@ function init() {
             questionObject.choices = licenses;
         }
         questionArray.push(questionObject);
+        console.log(questionArray)
     }
-    // ask questions
-   inquirer
-     .prompt(
-        questionArray
-    )
-    .then((data) => {
-        console.log(data);
-    }); 
+    return questionArray
 }
+
+// function to initialize program
+const init = () => {
+    // ask questions
+    inquirer.prompt(promptUser())
+        .then((data) => {
+            console.log(data);
+            console.log(generateMarkdown(data));
+            console.log(`${data.projectName}-Readme.md`);
+            writeToFile("NewReadme.md", generateMarkdown(data))
+    }); 
+
+};
+    
+
 
 // function call to initialize program
 init();
