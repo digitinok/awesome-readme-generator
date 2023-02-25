@@ -2,6 +2,8 @@
 function generateMarkdown(data) {
   return `# ${data.projectName}
 
+![alt License Badge](https://img.shields.io/badge/license-${data.license.split(" ").join("_")}-green.svg)
+
 ## Table of Contents
 
 1. [Description](#description)
@@ -26,9 +28,7 @@ ${data.usage}
 
 ## License
 
-The project uses the ${data.license} License.  
-For further information about what you are allowed to do, 
-check the license file in the repository, please.
+The project uses the ${data.license}. Please check the license file in the repository for further information about what you are allowed to do.
 
 ## Contributing
 

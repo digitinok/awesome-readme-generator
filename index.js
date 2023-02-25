@@ -5,9 +5,9 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of licenses
 const licenses = [
-    "GNU AGPLv3",
-    "GNU GPLv3",
-    "GNU LGPLv3",
+    "GNU Affero General Public License v3.0",
+    "GNU General Public License v3.0",
+    "GNU Lesser General Public License v3.0",
     "Mozilla Public License 2.0",
     "Apache License 2.0",
     "MIT License",
@@ -73,7 +73,6 @@ const init = () => {
 
 };
     
-
 
 // function call to initialize program
 init();
