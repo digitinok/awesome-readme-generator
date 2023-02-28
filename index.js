@@ -30,11 +30,6 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-   // path.format({
-   //     root: '/',
-   //     ext: '.md',
-   //     name: 'README',
-   //   });
       fs.writeFile(fileName, data, (err) =>
       err ? console.log(err) : console.log('Success! You have created a new README.md file.')
       );

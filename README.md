@@ -28,9 +28,17 @@ The application will be invoked in the comman line or terminal by using the foll
 node index.js
 ```
 
-Here you can find a demonstration of the Awesome Readme Generator:
+### Repository
+
+https://github.com/digitinok/awesome-readme-generator
+
+### Video demonstration
 
 ![alt video of readme-generator](assets/images/screenshot1.png)
+  
+### Sample Readme
+
+https://github.com/digitinok/awesome-readme-generator/samples/README.md
 
 ## License
 
@@ -47,12 +55,3 @@ The project is tested manually, generating lots of `README.md` files.
 ## Questions
 
 You can find us on GitHub: https://github.com/digitinok
-
-### Repository
-
-https://github.com/digitinok/awesome-readme-generator
-
-  
-### Sample Readme
-
-https://github.com/digitinok/awesome-readme-generator/samples/README.md
