@@ -64,7 +64,7 @@ const init = () => {
     // ask questions
     inquirer.prompt(promptUser())
         .then((data) => {
-            writeToFile("./samples/README.md", generateMarkdown(data))
+            writeToFile(`./samples/${data.projectName.split(" ").join("_")}_README.md`, generateMarkdown(data))
     }); 
 
 };

@@ -40,8 +40,8 @@ ${data.test}
 
 ## Questions
 
-You can find us on GitHub: https://github.com/${data.gitHubName}
-If you have any further questions, please feel free to send us an email: ${data.email}
+You can find us on GitHub: https://github.com/${data.gitHubName}.  
+If you have any further questions, please feel free to send us an email: ${data.email}.  
   
 `;
 }
