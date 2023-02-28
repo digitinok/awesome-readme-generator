@@ -36,7 +36,7 @@ function writeToFile(fileName, data) {
    //     name: 'README',
    //   });
       fs.writeFile(fileName, data, (err) =>
-      err ? console.log(err) : console.log('Success!')
+      err ? console.log(err) : console.log('Success! You have created a new README.md file.')
       );
 }
 
@@ -55,7 +55,6 @@ const promptUser = () => {
             questionObject.choices = licenses;
         }
         questionArray.push(questionObject);
-        console.log(questionArray)
     }
     return questionArray
 }
@@ -65,10 +64,7 @@ const init = () => {
     // ask questions
     inquirer.prompt(promptUser())
         .then((data) => {
-            console.log(data);
-            console.log(generateMarkdown(data));
-            console.log(`${data.projectName}-Readme.md`);
-            writeToFile("NewReadme.md", generateMarkdown(data))
+            writeToFile("./samples/README.md", generateMarkdown(data))
     }); 
 
 };
