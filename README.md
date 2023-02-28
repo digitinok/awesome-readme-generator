@@ -34,11 +34,12 @@ https://github.com/digitinok/awesome-readme-generator
 
 ### Video demonstration
 
-![alt video of readme-generator](assets/images/screenshot1.png)
+https://youtu.be/UimUy_1suvo 
   
 ### Sample Readme
 
 https://github.com/digitinok/awesome-readme-generator/samples/README.md
+https://github.com/digitinok/awesome-readme-generator/samples/project_One_README.md
 
 ## License
 
